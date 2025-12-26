@@ -1,78 +1,99 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f6f8;
-    color: #333;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
-main {
-    padding: 20px;
+a {
+    color: #1e90ff;
+    text-decoration: none;
 }
 
-h2 {
-    text-align: center;
+.container {
+    display: flex;
+    min-height: 80vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #1a1a1a;
+    padding: 2rem 1rem;
+    border-right: 1px solid #333;
+}
+
+.sidebar h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #1e90ff;
 }
 
 .member-list {
     list-style: none;
-    padding: 0;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.member-list li {
-   margin:12px 0;
-}
-
-.member-btn:hover {
-    background-color: white;
-    color:black;
-    border:0.5px solid black;
 }
 
 .member-btn {
-    position:relative;
     display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #1a1a1a;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
     text-align: center;
-    border-radius: 6px;
-    transition: background-color 0.5s ease;
-    overflow:hidden;
-    z-index:1;
+    transition: all 0.3s ease;
 }
 
-.member-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: white;
-    transition: width 0.4s ease;
-    z-index: -1;
+.member-btn:hover {
+    background-color: #1e90ff;
+    color: #121212;
+    transform: translateX(5px); 
 }
 
-.member-btn:hover::before {
-    width: 100%;
+.main-content {
+    flex: 1;
+    padding: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.personal-card {
+    background-color: #1a1a1a;
+    border: 1px solid #1e90ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin-top: 2rem;
+}
+
+.personal-card h2 {
+    margin-bottom: 0.8rem;
+    color: #1e90ff;
+}
+
+.personal-card p {
+    margin-bottom: 0.5rem;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #ddd;
-    margin-top: 30px;
+    padding: 1.5rem;
+    border-top: 1px solid #333;
+    color: #888;
+    background-color: #1a1a1a;
 }
